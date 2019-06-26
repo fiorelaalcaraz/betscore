@@ -1,7 +1,7 @@
 <?php
 require '../config/conexion.php';
 require 'sesion.php';
-require '../../vendor/autoload.php';
+require "../../sendgrid-php/sendgrid-php.php";
 /*$codigo = $_POST["codigo"];
 $nombre = $_POST["nombre"];
 $email = $_POST["email"];
