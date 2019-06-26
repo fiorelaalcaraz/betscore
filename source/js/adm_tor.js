@@ -1,128 +1,5 @@
 $(function() {
 
-    //ELIMINAR
-    $(document).on("click", ".eliminar", function() {
-        var pos = $(".eliminar").index(this);
-        $("#referencial tbody tr:eq(" + pos + ")").find('td:eq(0)').each(function() {
-            var campo1;
-            campo1 = $(this).html();
-            $("#cod_eliminar").val(campo1);
-        });
-    });
-    $(document).on("click", ".elimi", function() {
-        var cod = $("#cod_eliminar").val();
-        $.ajax({
-            type: "POST",
-            url: "grabar.php",
-            data: { descri: '', vruc: '', vdirec: '', vtel: '', ope: 'eliminacion', codigo: cod }
-        }).done(function(msg) {
-            $('.cerrar').click();
-            cargar();
-            alert(msg);
-        });
-
-    });
-    //FIN ELIMINAR
-
-    //EDITAR
-    $(document).on("click", ".editar", function() {
-        $("#btn_edit").attr("disabled", "disabled");
-        var pos = $(".editar").index(this);
-        $("#referencial tbody tr:eq(" + pos + ")").find('td:eq(1)').each(function() {
-            var campo1;
-            campo1 = $(this).html();
-            $("#descri_edit").val(campo1);
-            $("#descri_edit").focus();
-            $('#descri_edit').keyup(function() {
-                if ($("#descri_edit").val() === "" || $("#descri_edit").val() === campo1) {
-                    $("#btn_edit").attr("disabled", "disabled");
-                } else {
-                    $("#btn_edit").removeAttr("disabled");
-                }
-            });
-        });
-
-
-        $("#referencial tbody tr:eq(" + pos + ")").find('td:eq(2)').each(function() {
-            var campo3;
-            campo3 = $(this).html();
-            $("#vruc_edit").val(campo3);
-            $("#vruc_edit").focus();
-            $('#vruc_edit').keyup(function() {
-                if ($("#vruc_edit").val() === "" || $("#vruc_edit").val() === campo3) {
-                    $("#btn_edit").attr("disabled", "disabled");
-                } else {
-                    $("#btn_edit").removeAttr("disabled");
-                }
-            });
-
-        });
-
-        $("#referencial tbody tr:eq(" + pos + ")").find('td:eq(3)').each(function() {
-            var campo4;
-            campo4 = $(this).html();
-            $("#vdirec_edit").val(campo4);
-            $("#vdirec_edit").focus();
-            $('#vdirec_edit').keyup(function() {
-                if ($("#vdirec_edit").val() === "" || $("#vdirec_edit").val() === campo4) {
-                    $("#btn_edit").attr("disabled", "disabled");
-                } else {
-                    $("#btn_edit").removeAttr("disabled");
-                }
-            });
-        });
-
-        $("#referencial tbody tr:eq(" + pos + ")").find('td:eq(4)').each(function() {
-            var campo5;
-            campo5 = $(this).html();
-            $("#vtel_edit").val(campo5);
-            $("#vtel_edit").focus();
-            $('#vtel_edit').keyup(function() {
-                if ($("#vtel_edit").val() === "" || $("#vvtel_edit").val() === campo5) {
-                    $("#btn_edit").attr("disabled", "disabled");
-                } else {
-                    $("#btn_edit").removeAttr("disabled");
-                }
-            });
-        });
-
-
-        $("#referencial tbody tr:eq(" + pos + ")").find('td:eq(0)').each(function() {
-            var campo2 = $(this).html();
-            $("#cod_edit").val(campo2);
-        });
-    });
-
-    $(document).on("click", "#btn_edit", function() {
-        var nacio = $("#descri_edit").val();
-        var nacio2 = $("#cod_edit").val();
-        var nacio3 = $("#vruc_edit").val();
-        var nacio4 = $("#vdirec_edit").val();
-        var nacio5 = $("#vtel_edit").val();
-        $("#btn_edit").attr("disabled", "disabled");
-        $("#btn_edit").html("Editando...");
-        $.ajax({
-            type: "POST",
-            url: "grabar.php",
-            data: { codigo: nacio2, descri: nacio, vruc: nacio3, vdirec: nacio4, vtel: nacio5, ope: 'modificacion' }
-        }).done(function(msg) {
-            $('.cerrar').click();
-            $("#btn_edit").html("Editar");
-            cargar();
-            alert(msg);
-        });
-    });
-
-    $("#descri_edit").keypress(function(e) {
-        if (e.which === 13 && $("#descri_edit").val() !== "") {
-            $("#btn_edit").focus();
-            $("#btn_edit").click();
-        } else {
-
-        }
-    });
-    //FIN EDITAR    
-
     ////TABLA
     var tabla = $('#referencial').dataTable({
 
@@ -140,7 +17,7 @@ $(function() {
     cargar();
 
     function cargar() {
-        tabla.fnReloadAjax('/betscore/php/class/datos_torneo.php');
+        tabla.fnReloadAjax('/php/class/datos_torneo.php');
     }
     ////FIN TABLA
 
@@ -171,7 +48,7 @@ $(function() {
         $("#btnsave").html("AGREGANDO...");
         $.ajax({
             type: "POST",
-            url: "/betscore/php/class/grabar_torneo.php",
+            url: "php/class/grabar_torneo.php",
             data: { codigo: '0', nombre: nombre, liga: liga, fec_ini: fec_ini, costo: costo, obs: obs, pri: pri, seg: seg, ter: ter, cuar: cuar, ope: 'insercion' }
         }).done(function(msg) {
             alert(msg);
@@ -209,7 +86,7 @@ $(function() {
     //DIRECCIONAR SI ACEPTA
     $(document).on("click", "#btnacept", function() {
         var p_id_torneo_ = $("#id_torneo_").val();
-        location.href = "/betscore/index.php?l_id_torneo_=" + p_id_torneo_;
+        location.href = "/index.php?l_id_torneo_=" + p_id_torneo_;
 
     });
     //FIN DIRECCIONA SI ACEPTA
@@ -224,7 +101,7 @@ $(function() {
         //location.href = "?l_id_torneo_=" + p_id_torneo_;
         $.ajax({
             type: "POST",
-            url: "/betscore/php/class/datos_det_tor.php",
+            url: "/php/class/datos_det_tor.php",
             data: { torneo: p_id_torneo_, p_id_usu: p_id_usu }
         }).done(function(msg) {
             var data = $.parseJSON(msg);
@@ -247,7 +124,7 @@ $(function() {
                     { "data": "acciones" }
                 ]
             });
-            tabla.fnReloadAjax('/betscore/php/class/datos_part.php?torneo=' + torneo);
+            tabla.fnReloadAjax('/php/class/datos_part.php?torneo=' + torneo);
             cargar();
 
             var tabla = $('#tabla_posiciones').dataTable({
@@ -260,7 +137,7 @@ $(function() {
                     { "data": "puntos" }
                 ]
             });
-            tabla.fnReloadAjax('/betscore/php/class/datos_tab_pos.php?torneo=' + torneo);
+            tabla.fnReloadAjax('/php/class/datos_tab_pos.php?torneo=' + torneo);
             cargar();
 
         });
@@ -281,7 +158,7 @@ $(function() {
                 { "data": "premio" }
             ]
         });
-        tabla.fnReloadAjax('/betscore/php/class/datos_premios.php?torneo=' + p_id_torneo_);
+        tabla.fnReloadAjax('/php/class/datos_premios.php?torneo=' + p_id_torneo_);
         cargar();
 
 
@@ -312,7 +189,7 @@ $(function() {
         $("#btn_add").html("Enviando...");
         $.ajax({
             type: "POST",
-            url: "/betscore/php/class/guardarparti.php",
+            url: "/php/class/guardarparti.php",
             data: { codigo: '0', nombre: nombre, email: email, id_torneo, id_torneo, ope: 'insercion' }
         }).done(function(msg) {
             alert(msg);
@@ -337,7 +214,7 @@ $(function() {
             { "data": "acciones" }
         ]
     });
-    tabla1.fnReloadAjax('/betscore/php/class/datos_part.php?torneo=' + torneo);
+    tabla1.fnReloadAjax('/php/class/datos_part.php?torneo=' + torneo);
 
 
     function cargar1() {
@@ -359,7 +236,7 @@ $(function() {
             { "data": "puntos" }
         ]
     });
-    tabla1.fnReloadAjax('/betscore/php/class/datos_tab_pos.php?torneo=' + torneo);
+    tabla1.fnReloadAjax('/php/class/datos_tab_pos.php?torneo=' + torneo);
 
 
     function cargar2() {
@@ -374,7 +251,7 @@ $(function() {
         if (p_id_torneo_ == 0) {
             alert("Debe seleccionar un torneo");
         } else {
-            location.href = "/betscore/php/core/apuestas/apuestas.php?l_id_torneo_=" + p_id_torneo_;
+            location.href = "/php/core/apuestas/apuestas.php?l_id_torneo_=" + p_id_torneo_;
         }
     });
     //FIN DIRECCIONA APOSTAR

@@ -74,7 +74,7 @@ include "../menubar.php";
                         <h4>
                             <i class="icon-file-alt"></i>
                             Tabla de premios actualizada
-                            <img src="/betscore/source/img/147.png" width="50px" alt="">
+                            <img src="/source/img/147.png" width="50px" alt="">
                         </h4>
                     </header>
                     <div class="body">

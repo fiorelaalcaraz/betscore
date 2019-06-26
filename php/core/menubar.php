@@ -16,6 +16,7 @@ $fecha = date("d-m-Y");
             
                 <li id = "adm_tor"><a href="/php/core/adm_tor/adm_tor.php">Administrar Torneos</a></li>
                 <li><a href="/php/core/adm_tor/det_tor.php">Mis torneos</a></li>
+                <!--<li><a href="/betscore/php/core/jornada/prueba.php">Pruebas</a></li>-->
                 <li><a href="/php/core/premios/premios.php">Premios</a></li>
                 <li><a href="/php/core/apuestas/apuestas.php">Jornada</a></li>                   				
             </ul>

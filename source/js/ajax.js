@@ -43,7 +43,7 @@ $(function() {
         $(".saveapuesta").html("Guardando");
         $.ajax({
             type: "POST",
-            url: "/betscore/php/class/grabar_apuesta.php",
+            url: "/php/class/grabar_apuesta.php",
             data: { id_partido: id_partido, eleccion: eleccion, cod_torneo: cod_torneo }
         }).done(function(msg) {
 
@@ -93,7 +93,7 @@ $(function() {
         ]
     });
 
-    tabla.fnReloadAjax('/betscore/php/class/datos_apuestas.php?torneo=' + cod_torneo);
+    tabla.fnReloadAjax('/php/class/datos_apuestas.php?torneo=' + cod_torneo);
 
     function cargar() {
         tabla.fnReloadAjax();

@@ -30,7 +30,7 @@
                         <i class="icon-reorder"></i>
                     </a>
                 </li>
-                <li class="hidden-phone"><a href="/betscore/php/class/cerrar_sesion.php"><i class="icon-signout"></i></a></li>
+                <li class="hidden-phone"><a href="/php/class/cerrar_sesion.php"><i class="icon-signout"></i></a></li>
             </ul>
         </div>
     </div>

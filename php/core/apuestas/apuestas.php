@@ -43,44 +43,13 @@ include "../menubar.php";
         <!--Fin Titulo Contenido -->
         <!--Inicio de la pagina contenido -->
         <div class="row-fluid">
-            <!--div class="span5">
-                <section class="widget" type="hidden">
-                    <header>
-                        <h4>
-                            <i class="icon-align-left"></i>
-                            Agregar Estado Civil
-                        </h4>
-                    </header>
-                    <div class="body">
-                        <form class="form" method="post">
-                            <fieldset>
-                                <div class="well">
-                                    <div class="row-fluid non-responsive">
-                                        <div class="span12">
-                                            <div class="control-group controls-row">
-                                                <label class="control-label" for="descrip">Descripcion</label>
-                                                <div class="controls">
-                                                    <input type="text" id="descri" name="descri" class="span12" placeholder="Estado Civil" required/>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <button id="btnsave" name="btnsave" class="btn btn-primary span12">Agregar</button>
-                                </div>
-                            </fieldset>
-                        </form>
-                    </div>
-                </section>
-            </div-->
             <div class="span11">
                 <section class="widget">
                     <header>
                         <h4>
                             <i class="icon-file-alt"></i>
                             Lista jornada
-                            <img src="/betscore/source/img/147.png" width="50px" alt="">
+                            <img src="/source/img/147.png" width="50px" alt="">
                         </h4>
                     </header>
                     <div class="body">
@@ -112,28 +81,7 @@ include "../menubar.php";
         </div>
         <!--Fin de la pagina de contenido -->
         <div class="row-fluid">
-                <!--Inicio de Modal Editar -->
-                <div id="myModaleditar" class="modal hide fade" tabindex="-1" role="dialog">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">×</button>
-                        <h4 id="myModalLabel2">Editar Estado Civil</h4>
-                    </div>
-                    <div class="modal-body">
-                        <div class="control-group controls-row">
-                            <label class="control-label" for="descri_edit">Descripcion</label>
-                            <div class="controls">
-                                <input type="hidden" id="cod_edit">
-                                <input type="text" id="descri_edit" class="span12" required/>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn cerrar" data-dismiss="modal">Cancelar</button>
-                        <button class="btn btn-primary btn_edit" id="btn_edit">Editar</button>
-                    </div>
-                </div>
-                <!--Fin de Modal Editar -->
-                <!--Inicio de Modal Eliminar -->
+                <!--Inicio de Modal Confirmar -->
                 <div id="myModalapuesta" class="modal hide fade" tabindex="-1" role="dialog">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">×</button>
@@ -151,7 +99,7 @@ include "../menubar.php";
                             <button class="btn btn-primary saveapuesta">Confirmar</button>
                         </div>
                 </div>
-                <!--Fin de Modal Eliminar -->
+                <!--Fin de Modal Confirmar -->
         </div>
     </div>
     <!--Fin del Contenido -->

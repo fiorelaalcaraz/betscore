@@ -39,8 +39,8 @@ while ($value = pg_fetch_assoc($query)){
     }
     
     $button = $button_local."  ".$button_emp."  ".$button_visi;       
-    $img_local = "<img src='/betscore/source/img/".$value['id_equipo_local'].".png' width='35px' alt=''>";
-    $img_visi = "<img src='/betscore/source/img/".$value['id_equipo_visitante'].".png' width='35px' alt=''>";
+    $img_local = "<img src='/source/img/".$value['id_equipo_local'].".png' width='35px' alt=''>";
+    $img_visi = "<img src='/source/img/".$value['id_equipo_visitante'].".png' width='35px' alt=''>";
 
     $array[] = array('id_partido' => $value["id_partido"],'id_equipo_local' => $value["id_equipo_local"],'img_local' => $img_local,
     'equipo_local' => $value["equipo_local"],'id_equipo_visi' => $value["id_equipo_visitante"],'img_visi' => $img_visi,

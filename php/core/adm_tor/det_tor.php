@@ -142,7 +142,6 @@ include "../menubar.php";
                         <h4>
                             <i class="icon-file-alt"></i>
                             Participantes
-                            <a class="btn btn-mini btn-info" href="../informes/imp_empresa.php" target="_blank">Imprimir</a>
                         </h4>
                     </header>
                     <div class="body">
