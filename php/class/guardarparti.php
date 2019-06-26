@@ -2,7 +2,7 @@
 require '../config/conexion.php';
 require 'sesion.php';
 require "../../sendgrid-php/sendgrid-php.php";
-/*$codigo = $_POST["codigo"];
+$codigo = $_POST["codigo"];
 $nombre = $_POST["nombre"];
 $email = $_POST["email"];
 $id_torneo = $_POST["id_torneo"];
@@ -58,7 +58,7 @@ $mensajehtml = '<html>'.
 '</body>'.
 
 '</html>';
-
+/*
 $to = $email;
 $subject = "Betscore torneo de apuestas";
 $message = $mensajehtml;
@@ -74,9 +74,9 @@ if( $retval == true ){
 */
 
 $from = new SendGrid\Email(null, "betscore.invitaciones@gmail.com");
-$subject = "Hello World from the SendGrid PHP Library!";
-$to = new SendGrid\Email(null, "samudioivan59@gmail.com");
-$content = new SendGrid\Content("text/plain", "Hello, Email!");
+$subject = "Betscore Torneo de apuestas";
+$to = new SendGrid\Email(null, $email);
+$content = new SendGrid\Content("text/html", $mensajehtml);
 $mail = new SendGrid\Mail($from, $subject, $to, $content);
 
 $apiKey = getenv('SENDGRID_API_KEY');
