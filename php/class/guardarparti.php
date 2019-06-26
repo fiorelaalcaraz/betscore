@@ -1,6 +1,7 @@
 <?php
 require '../config/conexion.php';
 require 'sesion.php';
+require '../../vendor/autoload.php';
 $codigo = $_POST["codigo"];
 $nombre = $_POST["nombre"];
 $email = $_POST["email"];
@@ -11,7 +12,7 @@ $con->conectar();
 $sql = pg_query("select sp_invitaciones($codigo,'$nombre',$id_torneo,'$email','$ope')");
 $noticia = pg_last_notice($con->url);
 echo str_replace("NOTICE: ","",$noticia);
-
+/*
 $mensajehtml = '<html>'.
 
 '<head>'.
@@ -70,5 +71,35 @@ if( $retval == true ){
 }else{
    echo "Mensaje no enviado";
 }
+*/
 
+$request_body = json_decode('{
+    "personalizations": [
+      {
+        "to": [
+          {
+            "email": "test@example.com"
+          }
+        ],
+        "subject": "Hello World from the SendGrid PHP Library!"
+      }
+    ],
+    "from": {
+      "email": "test@example.com"
+    },
+    "content": [
+      {
+        "type": "text/plain",
+        "value": "http://betscore.herokuapp.com/php/core/adm_tor/adm_tor.php/php/core/adm_tor/det_tor.php?l_id_torneo='.$id_torneo.'"
+      }
+    ]
+  }');
+  
+  $apiKey = getenv('SENDGRID_API_KEY');
+  $sg = new \SendGrid($apiKey);
+  
+  $response = $sg->client->mail()->send()->post($request_body);
+  echo $response->statusCode();
+  echo $response->body();
+  echo $response->headers();
 ?>
