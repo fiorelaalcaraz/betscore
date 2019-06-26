@@ -2,7 +2,7 @@
 require '../config/conexion.php';
 require 'sesion.php';
 require '../../vendor/autoload.php';
-$codigo = $_POST["codigo"];
+/*$codigo = $_POST["codigo"];
 $nombre = $_POST["nombre"];
 $email = $_POST["email"];
 $id_torneo = $_POST["id_torneo"];
@@ -12,7 +12,7 @@ $con->conectar();
 $sql = pg_query("select sp_invitaciones($codigo,'$nombre',$id_torneo,'$email','$ope')");
 $noticia = pg_last_notice($con->url);
 echo str_replace("NOTICE: ","",$noticia);
-/*
+
 $mensajehtml = '<html>'.
 
 '<head>'.
