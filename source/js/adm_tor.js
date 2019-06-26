@@ -48,7 +48,7 @@ $(function() {
         $("#btnsave").html("AGREGANDO...");
         $.ajax({
             type: "POST",
-            url: "php/class/grabar_torneo.php",
+            url: "/php/class/grabar_torneo.php",
             data: { codigo: '0', nombre: nombre, liga: liga, fec_ini: fec_ini, costo: costo, obs: obs, pri: pri, seg: seg, ter: ter, cuar: cuar, ope: 'insercion' }
         }).done(function(msg) {
             alert(msg);
@@ -98,7 +98,6 @@ $(function() {
         var p_id_torneo_ = $("#usu_torneo").val();
         var p_id_usu = $("#id_usu").val();
 
-        //location.href = "?l_id_torneo_=" + p_id_torneo_;
         $.ajax({
             type: "POST",
             url: "/php/class/datos_det_tor.php",
