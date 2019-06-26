@@ -75,7 +75,7 @@ if( $retval == true ){
 
 $from = new SendGrid\Email(null, "betscore.invitaciones@gmail.com");
 $subject = "Hello World from the SendGrid PHP Library!";
-$to = new SendGrid\Email(null, $email);
+$to = new SendGrid\Email(null, "samudioivan59@gmail.com");
 $content = new SendGrid\Content("text/plain", "Hello, Email!");
 $mail = new SendGrid\Mail($from, $subject, $to, $content);
 
