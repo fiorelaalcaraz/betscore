@@ -73,33 +73,17 @@ if( $retval == true ){
 }
 */
 
-$request_body = json_decode('{
-    "personalizations": [
-      {
-        "to": [
-          {
-            "email": "test@example.com"
-          }
-        ],
-        "subject": "Hello World from the SendGrid PHP Library!"
-      }
-    ],
-    "from": {
-      "email": "test@example.com"
-    },
-    "content": [
-      {
-        "type": "text/plain",
-        "value": "http://betscore.herokuapp.com/php/core/adm_tor/adm_tor.php/php/core/adm_tor/det_tor.php?l_id_torneo='.$id_torneo.'"
-      }
-    ]
-  }');
-  
-  $apiKey = getenv('SENDGRID_API_KEY');
-  $sg = new \SendGrid($apiKey);
-  
-  $response = $sg->client->mail()->send()->post($request_body);
-  echo $response->statusCode();
-  echo $response->body();
-  echo $response->headers();
+$from = new SendGrid\Email(null, "betscore.invitaciones@gmail.com");
+$subject = "Hello World from the SendGrid PHP Library!";
+$to = new SendGrid\Email(null, $email);
+$content = new SendGrid\Content("text/plain", "Hello, Email!");
+$mail = new SendGrid\Mail($from, $subject, $to, $content);
+
+$apiKey = getenv('SENDGRID_API_KEY');
+$sg = new \SendGrid($apiKey);
+
+$response = $sg->client->mail()->send()->post($mail);
+echo $response->statusCode();
+echo $response->headers();
+echo $response->body();
 ?>
