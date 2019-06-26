@@ -91,7 +91,7 @@ if(!empty($_GET["l_id_torneo_"])){
 <script>
     function ir_regis(){
         var l_id_torneo_ = $("#usu_id_torneo").val();
-        alert(l_id_torneo_);
+        
         location.href = "php/core/reg_usu/reg_usu.php?l_id_torneo_=" +l_id_torneo_;
     }
 </script>
