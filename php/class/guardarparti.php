@@ -39,7 +39,7 @@ $mensajehtml = '<html>'.
         'Hola '.$nombre.' fuiste invitado a participar de un torneo'.
         '</h4>'.
 
-            '<a href="http://betscore.herokuapp.com/php/core/adm_tor/adm_tor.php/php/core/adm_tor/det_tor.php?l_id_torneo='.$id_torneo.'">'.
+            '<a href="http://betscore.herokuapp.com/php/core/adm_tor/det_tor.php?l_id_torneo='.$id_torneo.'">'.
                 '<button style="'.
                 'background-color: #e5603b;'.
                 'background-image: linear-gra-dient(to bottom, #e5603b, #e5603b);'.
