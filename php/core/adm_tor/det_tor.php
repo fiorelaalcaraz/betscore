@@ -81,7 +81,7 @@ include "../menubar.php";
                     <header>
                         <h4>
                             <i class="icon-align-left"></i>
-                            Crear Torneo
+                            <?php echo $datos_torneo["des_tor"]; ?>
                         </h4>
                     </header>
                     <div class="body">
@@ -166,7 +166,7 @@ include "../menubar.php";
                     <header>
                         <h4>
                             <i class="icon-file-alt"></i>
-                            Tabla deposiciones
+                            Tabla de posiciones
                         </h4>
                     </header>
                     <div class="body">
