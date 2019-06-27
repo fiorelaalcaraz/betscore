@@ -228,8 +228,8 @@ include "../menubar.php";
                                         <div class="span12">
                                             <div class="control-group controls-row">      
                                                     
-                                                    <button id="btnacept" name="btnacept" class="btn btn-success btn-large span6">Aceptar</button>
-                                                    <button id="btnarech" name="btnrech"  class="btn btn-danger btn-large span6">Rechazar</button>
+                                                    <button id="btnacept" name="btnacept" class="btn btn-large btn-success btn-block">Aceptar</button>
+                                                    
                                                                                                              
                                             </div>  
                                         </div>
