@@ -55,7 +55,7 @@ $(function() {
                 $(".saveapuesta").removeAttr("disabled");
                 $('.cerrar').click();
                 document.getElementById("mensaje_modal").innerHTML = "Estas seguro?";
-            }, 2000);
+            }, 1000);
 
 
 
