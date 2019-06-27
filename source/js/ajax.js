@@ -48,14 +48,14 @@ $(function() {
         }).done(function(msg) {
 
             document.getElementById("mensaje_modal").innerHTML = msg;
-            $(".saveapuesta").html("Confirmar");
-            $(".saveapuesta").removeAttr("disabled");
             cargar();
 
             setTimeout(function() {
+                $(".saveapuesta").html("Confirmar");
+                $(".saveapuesta").removeAttr("disabled");
                 $('.cerrar').click();
                 document.getElementById("mensaje_modal").innerHTML = "Estas seguro?";
-            }, 3000);
+            }, 2000);
 
 
 

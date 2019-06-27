@@ -3,8 +3,7 @@ require '../config/conexion.php';
 require 'sesion.php';
 $cn = new conexion();
 $cn->conectar();
-$button_editar = "<button data-toggle='modal' data-target='#myModaleditar' type='button' class='btn btn-warning editar' title='Editar'><i class='icon-pencil'></i></button>";
-$button_borrar = "<button data-toggle='modal' data-target='#myModaleliminar' type='button' class='btn btn-danger eliminar' id='eliminar' name='eliminar' title='Eliminar'><i class='eicon-cancel'></i></button>";
+
 $button_add = "<button type='button' class='btn btn-success agregar_p' title='Ir a detalle'><i class='icon-plus'></i></button>";
 $usu = $_SESSION['id'];
 
