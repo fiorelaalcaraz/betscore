@@ -48,7 +48,7 @@ require 'sesion.php';
                 
                 if ($invitado > 0) {
                     $update= pg_query("update invitaciones set estado = 'A'
-                                        where id_invitacion = $invitado
+                                        where email_invi = upper('".$_SESSION['email'].")'
                                           and id_torneo = $usu_id_torneo");
 
                     $insert = pg_query("insert into participaciones values (".$_SESSION['id'].",$usu_id_torneo,2,0);");																
