@@ -7,8 +7,7 @@ if(!empty($_GET["l_id_torneo_"])){
     $cod_torneo =  $_GET["l_id_torneo_"]; 
     echo $cod_torneo;
 }else{
-    $cod_torneo = 0;
-   
+    $cod_torneo = 0;  
 }
 
 ?>
