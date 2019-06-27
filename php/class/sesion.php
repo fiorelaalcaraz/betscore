@@ -30,7 +30,7 @@
     function verifico(){
         if(!estas_logeado()){
                 msg_sesion("Debes iniciar sesión para ingresar");
-                header("Location:../index.php");
+                header("Location:/index.php");
                 exit();
         }
     }
