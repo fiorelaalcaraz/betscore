@@ -17,12 +17,7 @@
                         <li role="presentation" class="account-picture">
                             <?php echo $_SESSION["nombre"]." ".$_SESSION["apell"]; ?>
                         </li>
-                        <li role="presentation">
-                            <a href="#" class="link">
-                                <i class="icon-user"></i>
-                                Perfil
-                            </a>
-                        </li>
+                        
                     </ul>
                 </li>
                 <li class="visible-phone">

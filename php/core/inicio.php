@@ -45,8 +45,8 @@ include "menubar.php";
         <!--Fin Titulo Contenido -->
         <!--Inicio de la pagina contenido -->
         <div class="row-fluid">
-            <img src="http://betscore.herokuapp.com/source/img/banner_futbol.png" height="276"style="
-                margin: 0 0 40;
+            <img src="http://betscore.herokuapp.com/source/img/banner_futbol.jpg" style="
+                margin: 20 0 40;
                 height: 300px;
                 width: 100%;
             ">
@@ -64,13 +64,13 @@ include "menubar.php";
                     </div>
                 </div>
                 <div class="span2">
-                <a href="../core/adm_tor/det_tor.php">       
+                <a href="/php/core/premios/premios.php">       
                     <div class="box">
                         <div class="icon">
                             <i class="eicon-trophy"></i>
                         </div>
                         <div class="description">
-                            <strong>TORNEOS</strong>
+                            <strong>PREMIOS</strong>
 
                         </div>
                         </a>       
@@ -78,14 +78,28 @@ include "menubar.php";
                 </div>
                
                 <div class="span2">
-                <a href="../core/jornada/prueba.php">               
+                <a href="/php/core/adm_tor/det_tor.php">               
                     <div class="box">
                         <div class="icon">
-                            <i class="icon-time"></i>
+                            <i class="icon-table"></i>
                         </div>
                         <div class="description">
 
-                           <strong>JORNADA</strong>
+                           <strong>MIS TORNEOS</strong>
+                
+                        </div>
+                    </div>
+                    </a>
+                </div>
+                <div class="span2">
+                <a href="/php/core/adm_tor/adm_tor.php">               
+                    <div class="box">
+                        <div class="icon">
+                            <i class="icon-edit"></i>
+                        </div>
+                        <div class="description">
+
+                           <strong>CREAR TORNEO</strong>
                 
                         </div>
                     </div>
