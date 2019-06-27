@@ -40,7 +40,7 @@ require 'sesion.php';
                 $con->conectar();
                 $sql1= "select id_invitacion 
 			            from invitaciones 
-			           where email_invi ='".$_SESSION['email']."' 
+			           where email_invi =upper('".$_SESSION['email'].")' 
                         and id_torneo = $usu_id_torneo";
 
                 $query = pg_query($sql1);
@@ -48,8 +48,8 @@ require 'sesion.php';
                 
                 if ($invitado > 0) {
                     $update= pg_query("update invitaciones set estado = 'A'
-                              where id_invitacion = $invitado
-                                and id_torneo = $usu_id_torneo");
+                                        where id_invitacion = $invitado
+                                          and id_torneo = $usu_id_torneo");
 
                     $insert = pg_query("insert into participaciones values (".$_SESSION['id'].",$usu_id_torneo,2,0);");																
                 }
