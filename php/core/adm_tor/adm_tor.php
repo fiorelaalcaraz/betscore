@@ -141,7 +141,7 @@ include "../menubar.php";
 								<th class="span2">Costo inscri.</th>
 								<th class="span3">Fec. inicio</th>
 								<th class="span3">Liga</th>
-                                <th class="span3">Acciones</th>
+                                <th class="span3">Detalles</th>
                             </tr>
                             </thead>
                             <tbody>
