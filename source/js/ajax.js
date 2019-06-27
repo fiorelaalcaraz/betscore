@@ -65,7 +65,7 @@ $(function() {
     //FIN APOSTAR
 
     var cod_torneo = $("#cod_torneo").val();
-    ////TABLA
+    ////TABLA APUESTAS
     var tabla = $('#fixture_table').dataTable({
         "columns": [
 
@@ -98,5 +98,48 @@ $(function() {
     function cargar() {
         tabla.fnReloadAjax();
     }
-    ////FIN TABLA
+    ////FIN TABLA APUESTA
+
+
+    //IR A RESULTADOS
+    $(document).on("click", ".btnresultados", function() {
+
+        location.href = "../resultados/resultados.php";
+
+    });
+    //FIN IR A RESULTADOS
+
+    ////TABLA APUESTAS
+    var tabla = $('#resultado_table').dataTable({
+        "columns": [
+
+            { "data": "fec_partido" },
+            { "data": "hora" },
+            { "data": "equipo_local" },
+            { "data": "img_local" },
+            { "data": "resultados" },
+            { "data": "img_visi" },
+            { "data": "equipo_visi" },
+
+            { "data": "id_partido" },
+            { "data": "id_equipo_local" },
+            { "data": "id_equipo_visi" }
+
+        ],
+        "columnDefs": [{
+                "targets": [8],
+                "visible": false
+            },
+            {
+                "targets": [9],
+                "visible": false
+            }
+        ]
+    });
+
+    tabla.fnReloadAjax('/php/class/datos_resultados.php');
+
+    function cargar() {
+        tabla.fnReloadAjax();
+    }
 });
