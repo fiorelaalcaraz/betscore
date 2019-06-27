@@ -119,8 +119,8 @@ $(function() {
                 destroy: true,
                 "columns": [
                     { "data": "nombre" },
-                    { "data": "email" },
-                    { "data": "acciones" }
+                    { "data": "email" }
+
                 ]
             });
             tabla.fnReloadAjax('/php/class/datos_part.php?torneo=' + torneo);
@@ -209,8 +209,8 @@ $(function() {
         "columns": [
 
             { "data": "nombre" },
-            { "data": "email" },
-            { "data": "acciones" }
+            { "data": "email" }
+
         ]
     });
     tabla1.fnReloadAjax('/php/class/datos_part.php?torneo=' + torneo);

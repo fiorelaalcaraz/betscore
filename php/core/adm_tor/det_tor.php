@@ -141,7 +141,7 @@ include "../menubar.php";
                     <header>
                         <h4>
                             <i class="icon-file-alt"></i>
-                            Participantes
+                            Invitados
                         </h4>
                     </header>
                     <div class="body">
@@ -150,7 +150,7 @@ include "../menubar.php";
                             <tr>
                                 <th class="span2">Nombre</th>
                                 <th class="span3">email</th>
-                                <th class="span2">Acciones</th>
+
                             </tr>
                             </thead>
                             <tbody>
