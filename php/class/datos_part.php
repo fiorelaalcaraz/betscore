@@ -12,7 +12,7 @@ $button_borrar = "<button data-toggle='modal' data-target='#myModaleliminar' typ
 
 $sql = ('select * 
           from sp_trae_part_invi('.$cod_torneo.') 
-            as (id_usuario integer, id_torneo integer,  nombre text ,  email character varying);');
+            as (id_torneo integer,  nombre character varying ,  email character varying);');
 
 $query = pg_query($sql);
 while ($value = pg_fetch_assoc($query)){
