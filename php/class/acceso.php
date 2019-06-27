@@ -16,7 +16,7 @@ require 'sesion.php';
 
    $con= new conexion();
    $con->conectar();
-   $sql="select * from usuarios where usuario='$usu'";
+   $sql="select * from usuarios where usuario=upper('$usu')";
    $num = $con->contar($sql);
 
 
