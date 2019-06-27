@@ -45,7 +45,7 @@ include "menubar.php";
         <!--Fin Titulo Contenido -->
         <!--Inicio de la pagina contenido -->
         <div class="row-fluid">
-            <img src="http://thttp://betscore.herokuapp.com/source/img/banner_futbol.jpg" height="276">
+            <img src="http://betscore.herokuapp.com/source/img/banner_futbol.jpg" height="276">
         </div>
         <div class="row-fluid" style="color: #ffffff;">
             <div class="row-fluid box-row">
