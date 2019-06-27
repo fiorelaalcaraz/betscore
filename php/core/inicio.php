@@ -47,7 +47,7 @@ include "menubar.php";
         <div class="row-fluid">
             <img src="http://betscore.herokuapp.com/source/img/banner_futbol.jpg" style="
                 margin: 20 0 40;
-                height: 300px;
+                height: 200px;
                 width: 100%;
             ">
         </div>
@@ -64,7 +64,7 @@ include "menubar.php";
                     </div>
                 </div>
                 <div class="span2">
-                <a href="/php/core/premios/premios.php">       
+                <a href="/php/core/premios/premios.php" style="color: white;">       
                     <div class="box">
                         <div class="icon">
                             <i class="eicon-trophy"></i>
@@ -78,7 +78,7 @@ include "menubar.php";
                 </div>
                
                 <div class="span2">
-                <a href="/php/core/adm_tor/det_tor.php">               
+                <a href="/php/core/adm_tor/det_tor.php"style="color: white;">               
                     <div class="box">
                         <div class="icon">
                             <i class="icon-table"></i>
@@ -92,7 +92,7 @@ include "menubar.php";
                     </a>
                 </div>
                 <div class="span2">
-                <a href="/php/core/adm_tor/adm_tor.php">               
+                <a href="/php/core/adm_tor/adm_tor.php" style="color: white;">               
                     <div class="box">
                         <div class="icon">
                             <i class="icon-edit"></i>
