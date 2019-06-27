@@ -8,7 +8,7 @@ if(!empty($_GET["l_id_torneo_"])){
     }else{
     $l_id_torneo = 0;
 }
-echo $l_id_torneo;
+
 $fecha = date("d-m-Y");
 ?>
 <html>
