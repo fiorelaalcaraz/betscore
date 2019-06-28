@@ -13,7 +13,7 @@ $sql = ("select fix.id_partido,
                 (select nombre_equipo from equipos eq where eq.id_api_equipo  = fix.id_equipo_visitante) as equipo_visi,
                 fec_partido,
                 hora,
-                goles_local||'. - .'||goles_visi as resultado
+                goles_local||' - '||goles_visi as resultado
                 from fixtures fix where fix.jornada = 22 order by fix.id_partido;");
 
 $query = pg_query($sql);

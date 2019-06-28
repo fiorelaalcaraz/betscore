@@ -102,9 +102,9 @@ $(function() {
 
 
     //IR A RESULTADOS
-    $(document).on("click", ".btnresultados", function() {
+    $(document).on("click", "#btnresultados", function() {
 
-        location.href = "../resultados/resultados.php";
+        location.href = "/php/core/resultados/resultados.php";
 
     });
     //FIN IR A RESULTADOS
