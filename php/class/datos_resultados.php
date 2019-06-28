@@ -4,18 +4,17 @@ require 'sesion.php';
 $cn = new conexion();
 $cn->conectar();
 
-$round = '22';
 
 
-$sql = ('select fix.id_partido, 
+$sql = ("select fix.id_partido, 
                 id_equipo_local,
                 (select nombre_equipo from equipos eq where eq.id_api_equipo  = fix.id_equipo_local) as equipo_local,
                 id_equipo_visitante,
                 (select nombre_equipo from equipos eq where eq.id_api_equipo  = fix.id_equipo_visitante) as equipo_visi,
                 fec_partido,
                 hora,
-                goles_local||'  -  '||goles_visi as resultado
-                from fixtures fix where fix.jornada = '.$round.' order by fix.id_partido;');
+                goles_local||'. - .'||goles_visi as resultado
+                from fixtures fix where fix.jornada = 22 order by fix.id_partido;");
 
 $query = pg_query($sql);
 

@@ -79,6 +79,31 @@ include "../menubar.php";
                 </section>
             </div>
         </div>
+        <div class="span6" >
+                <section class="widget">
+                    <header>
+                        <h4>
+                        </h4>
+                    </header>
+                    <div class="body">
+                    <fieldset>
+                                <div class="well">
+                                    <div class="row-fluid non-responsive">
+                                        <div class="span12">
+                                            <div class="control-group controls-row">      
+                                                    
+                                            <button id="btnresultados" name="btnresultados"class="btn btn-large btn-warning btn-block">Resultados</button>  
+                                                                                                             
+                                            </div>  
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </fieldset>                                
+                        <br>
+                    </div>
+                </section>
+            </div>
         <!--Fin de la pagina de contenido -->
         <div class="row-fluid">
                 <!--Inicio de Modal Confirmar -->
