@@ -7,7 +7,7 @@ $cn->conectar();
 $button_disable = "<button type='button' title='apostado' class='btn btn-danger' disabled='disabled'><i class='icon-stop'></i></button>";
 $usu = $_SESSION["id"];
 $cod_torneo = $_GET["torneo"];
-$round = '1';
+$round = '2';
 
 
 $sql = ('select fix.id_partido, 
