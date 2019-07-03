@@ -110,7 +110,7 @@ $(function() {
     //FIN IR A RESULTADOS
 
     ////TABLA APUESTAS
-    var tabla = $('#resultado_table').dataTable({
+    var tabla2 = $('#resultado_table').dataTable({
         "columns": [
 
             { "data": "fec_partido" },
@@ -137,7 +137,7 @@ $(function() {
         ]
     });
 
-    tabla.fnReloadAjax('/php/class/datos_resultados.php');
+    tabla2.fnReloadAjax('/php/class/datos_resultados.php');
 
     /*function cargar2() {
         tabla.fnReloadAjax();
