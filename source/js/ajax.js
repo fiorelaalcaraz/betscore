@@ -139,7 +139,7 @@ $(function() {
 
     tabla.fnReloadAjax('/php/class/datos_resultados.php');
 
-    function cargar() {
+    /*function cargar2() {
         tabla.fnReloadAjax();
-    }
+    }*/
 });
