@@ -24,7 +24,7 @@ require 'sesion.php';
    if($num == 1){
         $res = $con->select_array($sql);
         //COMPARA CONTRASENA
-        if($res["pass"]==$pass){
+        if($res["pass"]==md5($pass)){
             //CARGA VARIABLES DE SESSION
             $_SESSION["email"] = $usu;
             $_SESSION["pass"] = $pass;
