@@ -53,7 +53,7 @@ include "../menubar.php";
                         </h4>
                     </header>
                     <div class="body">
-                        <table id="fixture_table" class="table text-align-center" style="color: #ffffff;">
+                        <table id="fixture_table" class="display responsive no-wrap" style="color: #ffffff;">
                             <thead>
                             <tr> 
                                 
