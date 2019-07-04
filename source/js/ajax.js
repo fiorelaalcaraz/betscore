@@ -67,7 +67,9 @@ $(function() {
     var cod_torneo = $("#cod_torneo").val();
     ////TABLA APUESTAS
     var tabla = $('#fixture_table').dataTable({
-        responsive: true,
+        responsive: {
+            details: false
+        },
         bFilter: false,
         bLengthChange: false,
         "columns": [
