@@ -208,6 +208,8 @@ $(function() {
 
     var torneo = $("#id_torneo_").val();
     var tabla1 = $('#participantes').dataTable({
+        bFilter: false,
+        bLengthChange: false,
         "columns": [
 
             { "data": "nombre" },
