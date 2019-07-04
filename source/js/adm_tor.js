@@ -117,6 +117,8 @@ $(function() {
             var torneo = $("#id_torneo_").val();
             var tabla = $('#participantes').dataTable({
                 destroy: true,
+                bFilter: false,
+                bLengthChange: false,
                 "columns": [
                     { "data": "nombre" },
                     { "data": "email" }
