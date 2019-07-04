@@ -68,6 +68,8 @@ $(function() {
     ////TABLA APUESTAS
     var tabla = $('#fixture_table').dataTable({
         responsive: true,
+        bFilter: false,
+        bLengthChange: false,
         "columns": [
 
             { "data": "fec_partido" },
