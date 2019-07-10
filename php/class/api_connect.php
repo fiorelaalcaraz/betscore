@@ -1,6 +1,6 @@
 <?php
 // Disables SSL cert validation temporary
-require '../../config/conexion.php';
+require '../config/conexion.php';
 require_once '../../../vendor/mashape/unirest-php/src/Unirest.php';
 Unirest\Request::verifyPeer(false);
 $headers = array('Accept' => 'aplication/json');
