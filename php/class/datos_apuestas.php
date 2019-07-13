@@ -7,7 +7,7 @@ $cn->conectar();
 $button_disable = "<button type='button' title='apostado' class='btn btn-danger' disabled='disabled'><i class='icon-stop'></i></button>";
 $usu = $_SESSION["id"];
 $cod_torneo = $_GET["torneo"];
-$round = '2';
+
 
 
 $sql = ('select fix.id_partido, 
@@ -19,7 +19,10 @@ $sql = ('select fix.id_partido,
                 hora,
                 (select prediccion from predicciones pre where pre.id_partido = fix.id_partido and pre.id_usuario = '.$usu.' and pre.id_torneo = '.$cod_torneo.' ) as apuesta,
 				(select id_torneo from predicciones pre where pre.id_partido = fix.id_partido and pre.id_usuario = '.$usu.' and pre.id_torneo = '.$cod_torneo.') as id_torneo
-                from fixtures fix where fix.jornada = '.$round.' order by fix.id_partido;');
+                from fixtures fix 
+         where fix.jornada = (select min(jor.jornada) from fixtures jor where jor.goles_visi is null )
+         and fix.id_temp = '.'2'.' 
+      order by fix.id_partido;');
 
 $query = pg_query($sql);
 
