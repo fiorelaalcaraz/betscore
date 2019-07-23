@@ -10,19 +10,19 @@ $cod_torneo = $_GET["torneo"];
 
 
 
-$sql = ('select fix.id_partido, 
+$sql = ("select fix.id_partido, 
                 id_equipo_local,
                 (select nombre_equipo from equipos eq where eq.id_api_equipo  = fix.id_equipo_local) as equipo_local,
                 id_equipo_visitante,
                 (select nombre_equipo from equipos eq where eq.id_api_equipo  = fix.id_equipo_visitante) as equipo_visi,
                 fec_partido,
                 hora,
-                (select prediccion from predicciones pre where pre.id_partido = fix.id_partido and pre.id_usuario = '.$usu.' and pre.id_torneo = '.$cod_torneo.' ) as apuesta,
-				(select id_torneo from predicciones pre where pre.id_partido = fix.id_partido and pre.id_usuario = '.$usu.' and pre.id_torneo = '.$cod_torneo.') as id_torneo
+                (select prediccion from predicciones pre where pre.id_partido = fix.id_partido and pre.id_usuario = $usu and pre.id_torneo = $cod_torneo ) as apuesta,
+				(select id_torneo from predicciones pre where pre.id_partido = fix.id_partido and pre.id_usuario = $usu and pre.id_torneo = $cod_torneo) as id_torneo
                 from fixtures fix 
          where fix.jornada = (select min(jor.jornada) from fixtures jor where jor.goles_visi is null )
-         and fix.id_temp = '.'2'.' 
-      order by fix.id_partido;');
+         and fix.id_temp = '2' 
+      order by fix.id_partido;");
 
 $query = pg_query($sql);
 
