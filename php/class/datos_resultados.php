@@ -14,7 +14,7 @@ $sql = ("select fix.id_partido,
                 fec_partido,
                 hora,
                 goles_local||' - '||goles_visi as resultado
-                from fixtures fix where fix.jornada = 22 order by fix.id_partido;");
+                from fixtures fix where fix.jornada = 3 and id_partido > 190000 order by fix.id_partido;");
 
 $query = pg_query($sql);
 
