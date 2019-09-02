@@ -24,6 +24,6 @@ while ($value = pg_fetch_assoc($query)){
     'resultados' => $value["resultado"]);
 }
 //$data = array('data' => $array);
-//$json = json_encode($data);
-print_r(utf8_encode($array));
+$json = json_encode($array);
+print_r(utf8_encode($json));
 ?>
