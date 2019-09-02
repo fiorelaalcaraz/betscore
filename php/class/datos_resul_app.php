@@ -23,7 +23,7 @@ while ($value = pg_fetch_assoc($query)){
     'equipo_visi' => $value["equipo_visi"], 
     'resultados' => $value["resultado"]);
 }
-$data = array('data' => $array);
-$json = json_encode($data);
-print_r(utf8_encode($json));
+//$data = array('data' => $array);
+//$json = json_encode($data);
+print_r(utf8_encode($array));
 ?>
