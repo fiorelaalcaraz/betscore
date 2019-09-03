@@ -7,7 +7,8 @@ $cn->conectar();
 $jor = $_REQUEST["jornada"];
 
 $jornada = substr($jor,8,1);
-
+echo $jornada;
+/*
 $sql = ("select 
                 (select nombre_equipo from equipos eq where eq.id_api_equipo  = fix.id_equipo_local) as equipo_local,
                 (select nombre_equipo from equipos eq where eq.id_api_equipo  = fix.id_equipo_visitante) as equipo_visi,
@@ -28,5 +29,5 @@ while ($value = pg_fetch_assoc($query)){
 }
 //$data = array('data' => $array);
 $json = json_encode($array);
-print_r(utf8_encode($json));
+print_r(utf8_encode($json));*/
 ?>
