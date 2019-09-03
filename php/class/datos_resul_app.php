@@ -4,7 +4,7 @@ require 'sesion.php';
 $cn = new conexion();
 $cn->conectar();
 
-$jor = $_REQUEST["jornada"];
+$jornada = $_REQUEST["jornada"];
 
 
 $sql = ("select 
