@@ -4,12 +4,12 @@ require 'sesion.php';
 $cn = new conexion();
 $cn->conectar();
 
-
+$jornada = $_REQUEST["jornada"];
 $sql = ("select 
                 (select nombre_equipo from equipos eq where eq.id_api_equipo  = fix.id_equipo_local) as equipo_local,
                 (select nombre_equipo from equipos eq where eq.id_api_equipo  = fix.id_equipo_visitante) as equipo_visi,
                 goles_local||' - '||goles_visi as resultado
-                from fixtures fix where fix.jornada = 8 and id_partido > 190000 order by fix.id_partido;");
+                from fixtures fix where fix.jornada = $jornada and id_partido > 190000 order by fix.id_partido;");
 
 $query = pg_query($sql);
 
