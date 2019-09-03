@@ -5,6 +5,9 @@ $cn = new conexion();
 $cn->conectar();
 
 $jornada = $_REQUEST["jornada"];
+
+$jornada = substr(6,7);
+echo $jornada;
 $sql = ("select 
                 (select nombre_equipo from equipos eq where eq.id_api_equipo  = fix.id_equipo_local) as equipo_local,
                 (select nombre_equipo from equipos eq where eq.id_api_equipo  = fix.id_equipo_visitante) as equipo_visi,
