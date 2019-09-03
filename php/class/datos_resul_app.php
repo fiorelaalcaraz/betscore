@@ -4,8 +4,9 @@ require 'sesion.php';
 $cn = new conexion();
 $cn->conectar();
 
-$jornada = $_REQUEST["jornada"];
+$jor = $_REQUEST["jornada"];
 
+$jornada = substr($jor,8,1);
 
 $sql = ("select 
                 (select nombre_equipo from equipos eq where eq.id_api_equipo  = fix.id_equipo_local) as equipo_local,
