@@ -33,7 +33,7 @@ require 'sesion.php';
 
    $sql = pg_query("select sp_reg_usu(0,'$nom','$apel','$correo','$usu','$pass',$l_id_torneo,'$ope')");
    $noticia = pg_last_notice($con->url);
-   echo str_replace("NOTICE: ","",$noticia);
+   //echo str_replace("NOTICE: ","",$noticia);
 
    $sql1="select * from usuarios where usuario=upper('$usu')";
    $num = $con->contar($sql1);
@@ -58,7 +58,8 @@ require 'sesion.php';
             llevame_a("../../index.php");
         }
    }else{
-       msg_sesion('Mensaje: '."$noticia".'.');
+       //aqui deberia ir la varible noticia
+       msg_sesion("Este email ya fue registrado ".$usu);
        llevame_a("../core/reg_usu/reg_usu.php");
    }
  ?>
