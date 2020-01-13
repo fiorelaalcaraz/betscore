@@ -42,7 +42,7 @@ require 'sesion.php';
 
    if($num == 1){
         $res = $con->select_array($sql1);
-        if($res["pass"]==$pass){
+        if($res["pass"]==md5($pass)){
             $_SESSION["email"] = $usu;
             $_SESSION["pass"] = $pass;
             $_SESSION["id"] = $res["id_usuario"];
