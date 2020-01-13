@@ -57,11 +57,11 @@ require 'sesion.php';
             llevame_a("../core/inicio.php");
         }else{
             msg_sesion("Ha ocurrido un error, vuelva intentar");
-          // llevame_a("../../index.php");
+           llevame_a("../../index.php");
         }
    }else{
        //aqui deberia ir la varible noticia
-       msg_sesion("Este email ya fue registrado ".$correo);
-       //llevame_a("../core/reg_usu/reg_usu.php");
+       msg_sesion("$noticia");
+       llevame_a("../core/reg_usu/reg_usu.php");
    }
  ?>
