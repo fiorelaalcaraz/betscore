@@ -26,7 +26,9 @@ if(!empty($_GET["l_id_torneo_"])){
     <script src="assets/lib/jquery/jquery.1.9.0.min.js"> </script>
     <script src="assets/lib/backbone/underscore-min.js"></script>
     <script src="assets/js/settings.js"> </script>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script data-ad-client="ca-pub-3029581055740792" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    </head>
 <body>
 <div class="single-widget-container">
     <section class="widget login-widget">
