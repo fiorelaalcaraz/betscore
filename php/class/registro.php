@@ -54,7 +54,7 @@ require 'sesion.php';
          
             llevame_a("../core/inicio.php");
         }else{
-            msg_sesion("Contraseña incorrecta");
+            msg_sesion("Ha ocurrido un error, vuelva intentar");
             llevame_a("../../index.php");
         }
    }else{
