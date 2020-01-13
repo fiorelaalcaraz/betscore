@@ -58,7 +58,7 @@ require 'sesion.php';
             llevame_a("../../index.php");
         }
    }else{
-       msg_sesion($noticia);
+       msg_sesion("$noticia");
        llevame_a("../core/reg_usu/reg_usu.php");
    }
  ?>
