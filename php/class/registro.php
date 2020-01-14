@@ -35,7 +35,7 @@ require 'sesion.php';
    $noticia = pg_last_notice($con->url);
    echo str_replace("NOTICE: ","",$noticia);
    
-   if ($noticia == "Tu usuario ha sido registrado."){
+   if ($noticia == "NOTICE: Tu usuario ha sido registrado."){
 
    $sql1="select * from usuarios where usuario=upper('$usu')";
    $num = $con->contar($sql1);
@@ -60,7 +60,7 @@ require 'sesion.php';
            llevame_a("../../index.php");
         }
    }else{
-       //aqui deberia ir la varible noticia
+       
        msg_sesion("$noticia");
        llevame_a("../core/reg_usu/reg_usu.php");
    }
