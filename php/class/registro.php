@@ -33,7 +33,7 @@ require 'sesion.php';
 
    $sql = pg_query("select sp_reg_usu(0,'$nom','$apel','$correo','$usu','$pass',$l_id_torneo,'$ope')");
    $noticia = pg_last_notice($con->url);
-   //echo str_replace("NOTICE: ","",$noticia);
+   echo str_replace("NOTICE: ","",$noticia);
    
    if ($noticia == "Tu usuario ha sido registrado."){
 
@@ -62,6 +62,6 @@ require 'sesion.php';
    }else{
        
        msg_sesion("$noticia");
-       llevame_a("../core/reg_usu/reg_usu.php");
+       //llevame_a("../core/reg_usu/reg_usu.php");
    }
  ?>
