@@ -62,6 +62,6 @@ require 'sesion.php';
    }else{
        
        msg_sesion("$noticia");
-       //llevame_a("../core/reg_usu/reg_usu.php");
+       llevame_a("../core/reg_usu/reg_usu.php");
    }
  ?>
