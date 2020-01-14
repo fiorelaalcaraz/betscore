@@ -41,7 +41,7 @@ require 'sesion.php';
    $num = $con->contar($sql1);
    echo $num;
    }
-
+   /*
    if($num == 1){
         $res = $con->select_array($sql1);
         if($res["pass"]==md5($pass)){
@@ -63,5 +63,5 @@ require 'sesion.php';
        
        msg_sesion("$noticia");
        llevame_a("../core/reg_usu/reg_usu.php");
-   }
+   }*/
  ?>
