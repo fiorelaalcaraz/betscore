@@ -33,9 +33,9 @@ require 'sesion.php';
 
    $sql = pg_query("select sp_reg_usu(0,'$nom','$apel','$correo','$usu','$pass',$l_id_torneo,'$ope')");
    $noticia = pg_last_notice($con->url);
-   echo str_replace("NOTICE: ","",$noticia);
+   //echo str_replace("NOTICE: ","",$noticia);
    
-   if ($noticia == "NOTICE: Tu usuario ha sido registrado."){
+   if ($noticia == "Tu usuario ha sido registrado."){
 
    $sql1="select * from usuarios where usuario=upper('$usu')";
    $num = $con->contar($sql1);
