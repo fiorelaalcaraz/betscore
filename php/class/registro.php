@@ -61,7 +61,7 @@ require 'sesion.php';
         }
    }else{
        //aqui deberia ir la varible noticia
-       msg_sesion("$noticia");
-       llevame_a("../core/reg_usu/reg_usu.php");
+       msg_sesion("algo pasa. '$noticia'");
+       //llevame_a("../core/reg_usu/reg_usu.php");
    }
  ?>
