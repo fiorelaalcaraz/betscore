@@ -33,15 +33,13 @@ require 'sesion.php';
 
    $sql = pg_query("select sp_reg_usu(0,'$nom','$apel','$correo','$usu','$pass',$l_id_torneo,'$ope')");
    $noticia = pg_last_notice($con->url);
-   echo str_replace("NOTICE: ","",$noticia);
+   $noticia = str_replace("NOTICE: ","",$noticia);
    
-   if ($noticia == "Tu usuario ha sido registrado."){
-
+ 
+ 
    $sql1="select * from usuarios where usuario=upper('$usu')";
    $num = $con->contar($sql1);
-   echo $num;
-   }
-   /*
+   
    if($num == 1){
         $res = $con->select_array($sql1);
         if($res["pass"]==md5($pass)){
@@ -56,12 +54,11 @@ require 'sesion.php';
          
             llevame_a("../core/inicio.php");
         }else{
-            msg_sesion("Ha ocurrido un error, vuelva intentar");
-           llevame_a("../../index.php");
+            msg_sesion("$noticia");
+            llevame_a("../../index.php");
         }
    }else{
        
        msg_sesion("$noticia");
        llevame_a("../core/reg_usu/reg_usu.php");
-   }*/
- ?>
+   }
