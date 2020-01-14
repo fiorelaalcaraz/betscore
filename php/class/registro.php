@@ -40,9 +40,7 @@ require 'sesion.php';
    $sql1="select * from usuarios where usuario=upper('$usu')";
    $num = $con->contar($sql1);
    echo $num;
-   }else{
-    echo str_replace("NOTICE: ","",$noticia);
-   } 
+   }
 
    if($num == 1){
         $res = $con->select_array($sql1);
@@ -61,9 +59,9 @@ require 'sesion.php';
             msg_sesion("Ha ocurrido un error, vuelva intentar");
            llevame_a("../../index.php");
         }
-   }/*else{
+   }else{
        //aqui deberia ir la varible noticia
-       msg_sesion("algo pasa");
+       msg_sesion("$noticia");
        llevame_a("../core/reg_usu/reg_usu.php");
-   }*/
+   }
  ?>
