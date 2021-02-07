@@ -46,27 +46,25 @@ foreach($array_par as $row){
 
   $data = '{'.$id_fixture.'}'.'{'.$round.'}'.'{'.$id_equipo_local.'}'.'{'.$id_equipo_visi.'}'.'{'.$goles_local.'}'.'{'.$goles_visi.'}'.'{'.$fec_partido.'}'.'<br/>';
 //echo ($data);
-/*
+
 if (!isset($goles_local)){
 
 	
-	$sql = pg_query("update fixtures set goles_local = null, goles_visi = null where id_partido = $id_fixture ;");
-	$noticia = pg_last_notice($con->url);
-	echo str_replace("NOTICE: ","",$noticia);
+	$sql = pg_query("insert into fixtures values ($id_fixture,'',$id_equipo_local,$id_equipo_visi,'3',null,null,'$fec',$jor,'$hor'); ");
+    $noticia = pg_last_notice($con->url);
+    echo str_replace("NOTICE: ","",$noticia);
+
+
   	
 }else{
   
-  $sql = pg_query("update fixtures set goles_local = $goles_local, goles_visi = $goles_visi where id_partido = $id_fixture ;"); 	
-	
-	$noticia = pg_last_notice($con->url);
-	echo str_replace("NOTICE: ","",$noticia);
-  };*/
-  
-//$sql = pg_query("insert into fixtures values ($id_fixture,'',$id_equipo_local,$id_equipo_visi,'3',$goles_local,$goles_visi,'$fec',$jor,'$hor'); ");
-//$noticia = pg_last_notice($con->url);
-//echo str_replace("NOTICE: ","",$noticia);
-//echo ($id_fixture.' = '.$jor.' ');
-echo ("insert into fixtures values ($id_fixture,'',$id_equipo_local,$id_equipo_visi,'3',$goles_local,$goles_visi,'$fec',$jor,'$hor'); ");
+   $sql = pg_query("insert into fixtures values ($id_fixture,'',$id_equipo_local,$id_equipo_visi,'3',$goles_local,$goles_visi,'$fec',$jor,'$hor'); ");
+   $noticia = pg_last_notice($con->url);
+   echo str_replace("NOTICE: ","",$noticia);
+
+
+  };   
+
 }
 
   
