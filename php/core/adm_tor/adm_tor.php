@@ -2,7 +2,7 @@
 require "../../config/funciones.php";
 require "../../class/sesion.php";
 require "../../class/torneo.php";
-require "../class/liga.php";
+require "../../class/liga.php";
 
 
 //verifica session
@@ -68,9 +68,9 @@ include "../menubar.php";
                                                 <label class="control-label" for="descrip">Liga</label>
 												<div class="controls">
                                                     <select id="liga" required="required" data-placeholder="Select Liga" class="select-block-level chzn-select">
-                                                        <option value=""></option>
+                                                        <option value="1"></option>
                                                         <?php
-                                                        Liga::get_ligas();
+                                                        //Liga::get_ligas();
                                                         ?>
                                                     </select>       
                                                 </div>
