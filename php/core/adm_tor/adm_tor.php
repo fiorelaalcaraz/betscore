@@ -70,7 +70,7 @@ include "../menubar.php";
                                                     <select id="liga" required="required" data-placeholder="Select Liga" class="select-block-level chzn-select">
                                                         <option value="1"></option>
                                                         <?php
-                                                       // Liga::get_ligas();
+                                                        Liga::get_ligas();
                                                         ?>
                                                     </select>       
                                                 </div>
