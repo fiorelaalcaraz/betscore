@@ -42,7 +42,7 @@ foreach($array_par as $row){
 
   $fec = substr($fec_partido,0,10);
   $hor = substr($fec_partido,11,5);
-  $jor = substr($round,12,12);
+  $jor = substr($round,11,12);
 
   $data = '{'.$id_fixture.'}'.'{'.$round.'}'.'{'.$id_equipo_local.'}'.'{'.$id_equipo_visi.'}'.'{'.$goles_local.'}'.'{'.$goles_visi.'}'.'{'.$fec_partido.'}'.'<br/>';
 //echo ($data);
