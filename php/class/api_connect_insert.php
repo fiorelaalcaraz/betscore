@@ -72,8 +72,8 @@ echo str_replace("NOTICE: ","",$noticia);
 
 
 
-/*$data = array('data' => $array_par);
+$data = array('data' => $array_par);
 $json = json_encode($data);
-print_r(utf8_encode($json));*/
+print_r(utf8_encode($json));
 
 ?>
