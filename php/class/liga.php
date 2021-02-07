@@ -1,5 +1,5 @@
 <?php
-require_once "bestcore/config/conexion.php";
+require_once "bestcore/php/config/conexion.php";
 //require "../../class/sesion.php";
 
 class Liga{
