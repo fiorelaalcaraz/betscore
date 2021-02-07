@@ -17,7 +17,7 @@ class Liga{
         $this->id_api_liga = $id_api;
         
      }
-     echo "<option value='".$lig["id_liga"]."'>".$lig["descrip_liga"]."</option>"
+     
     // obtener ligas
     public function get_ligas(){
         $con = new conexion();
