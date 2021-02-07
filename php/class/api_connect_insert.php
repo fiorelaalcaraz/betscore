@@ -65,7 +65,8 @@ if (!isset($goles_local)){
 $sql = pg_query("insert into fixtures values ($id_fixture,'',$id_equipo_local,$id_equipo_visi,'3',$goles_local,$goles_visi,'$fec',$jor,'$hor'); ");
 $noticia = pg_last_notice($con->url);
 echo str_replace("NOTICE: ","",$noticia);
-echo ("insert into fixtures values ($id_fixture,'',$id_equipo_local,$id_equipo_visi,'3',$goles_local,$goles_visi,'$fec',$jor,'$hor'); ");
+echo ($jor) 
+//("insert into fixtures values //($id_fixture,'',$id_equipo_local,$id_equipo_visi,'3',$goles_local,$goles_visi,'$fec',$jor,'$hor'); ");
 }
 
   
