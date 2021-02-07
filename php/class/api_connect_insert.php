@@ -6,7 +6,7 @@ require_once '../../vendor/mashape/unirest-php/src/Unirest.php';
 Unirest\Request::verifyPeer(false);
 $headers = array('Accept' => 'aplication/json');
 
-$response = Unirest\Request::get("https://api-football-v1.p.rapidapi.com/fixtures/league/3238",
+$response = Unirest\Request::get("https://api-football-v1.p.rapidapi.com/fixtures/league/3268",
   array(
     "X-RapidAPI-Host" => "api-football-v1.p.rapidapi.com",
     "X-RapidAPI-Key" => "a48ab96a53msh2870b047f08e368p10a062jsn9fb04936b958"
