@@ -45,8 +45,8 @@ foreach($array_par as $row){
   $jor = substr($round,17,17);
 
   $data = '{'.$id_fixture.'}'.'{'.$round.'}'.'{'.$id_equipo_local.'}'.'{'.$id_equipo_visi.'}'.'{'.$goles_local.'}'.'{'.$goles_visi.'}'.'{'.$fec_partido.'}'.'<br/>';
-echo ($data);
-
+//echo ($data);
+/*
 if (!isset($goles_local)){
 
 	
@@ -60,7 +60,7 @@ if (!isset($goles_local)){
 	
 	$noticia = pg_last_notice($con->url);
 	echo str_replace("NOTICE: ","",$noticia);
-  };
+  };*/
   
 $sql = pg_query("insert into fixtures values ($id_fixture,'',$id_equipo_local,$id_equipo_visi,'3',$goles_local,$goles_visi,'$fec',$jor,'$hor'); ");
 $noticia = pg_last_notice($con->url);
@@ -71,9 +71,9 @@ echo str_replace("NOTICE: ","",$noticia);
   
 
 
-
+/*
 $data = array('data' => $array_par);
 $json = json_encode($data);
-print_r(utf8_encode($json));
+print_r(utf8_encode($json));*/
 
 ?>
