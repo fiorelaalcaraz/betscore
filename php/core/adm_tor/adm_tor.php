@@ -69,16 +69,9 @@ include "../menubar.php";
                                                 <label class="control-label" for="descrip">Liga</label>
 												<div class="controls">
                                                     <select id="liga" required="required" data-placeholder="Select Liga" class="select-block-level chzn-select">
-                                                        <option value="1"></option>
+                                                        <option value=""></option>
                                                         <?php
-                                                          $con = new conexion();
-                                                          $con ->conectar();
-                                                          $liga = pg_query("select * from ligas order by 1;");
-                                                          while ($lig = pg_fetch_assoc($liga)){
-                                                          echo "<option value='".$lig["id_liga"]."'>".$lig["descrip_liga"]."</option>";
-                                                          }
-                                                          $con->destruir();
-                                                        //Liga::get_ligas();
+                                                        Liga::get_ligas();
                                                         ?>
                                                     </select>       
                                                 </div>
