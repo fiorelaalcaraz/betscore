@@ -1,8 +1,8 @@
 <?php 
-require "../config/funciones.php";
-require "../class/sesion.php";
-require "../class/torneo.php";
-require "../class/liga.php";
+require "../../config/funciones.php";
+require "../../class/sesion.php";
+require "../../class/torneo.php";
+require "../../class/liga.php";
 
 
 //verifica session
