@@ -6,7 +6,7 @@ require "../../class/liga.php";
 
 
 //verifica session
-verifico();
+//verifico();
 
 $fecha = date("d-m-Y");
 ?>
