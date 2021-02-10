@@ -1,12 +1,12 @@
 <?php 
 require "../../config/funciones.php";
-//require "../../class/sesion.php";
+require "../../class/sesion.php";
 //require "../../class/torneo.php";
 //require "../../class/liga.php";
 
 
 //verifica session
-//verifico();
+verifico();
 
 $fecha = date("d-m-Y");
 ?>
