@@ -1,6 +1,7 @@
 <?php 
 require "php/config/funciones.php";
 require "php/class/sesion.php";
+require "php/class/conexion.php";
 require "php/class/torneo.php";
 require "php/class/liga.php";
 
@@ -70,7 +71,14 @@ include "../menubar.php";
                                                     <select id="liga" required="required" data-placeholder="Select Liga" class="select-block-level chzn-select">
                                                         <option value="1"></option>
                                                         <?php
-                                                        Liga::get_liga();
+                                                          $con = new conexion();
+                                                          $con ->conectar();
+                                                          $liga = pg_query("select * from ligas order by 1;");
+                                                          while ($lig = pg_fetch_assoc($liga)){
+                                                          echo "<option value='".$lig["id_liga"]."'>".$lig["descrip_liga"]."</option>";
+                                                          }
+                                                          $con->destruir();
+                                                        //Liga::get_ligas();
                                                         ?>
                                                     </select>       
                                                 </div>
