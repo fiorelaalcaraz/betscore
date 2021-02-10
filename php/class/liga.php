@@ -20,7 +20,7 @@ class Liga{
      
     // obtener ligas
     public function get_ligas(){
-        echo "<option value='".$lig["id_liga"]."'>".$lig["descrip_liga"]."</option>";
+        echo "<option value='1'>'descrip'</option>";
         /*$con = new conexion();
         $con ->conectar();
         $liga = pg_query("select * from ligas order by 1;");
