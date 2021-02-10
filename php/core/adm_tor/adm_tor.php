@@ -69,9 +69,9 @@ include "../menubar.php";
                                                 <label class="control-label" for="descrip">Liga</label>
 												<div class="controls">
                                                     <select id="liga" required="required" data-placeholder="Select Liga" class="select-block-level chzn-select">
-                                                        <option value=""></option>
+                                                        <option value="1">descrip</option>
                                                         <?php
-                                                        Liga::get_ligas();
+                                                        //Liga::get_ligas();
                                                         ?>
                                                     </select>       
                                                 </div>
