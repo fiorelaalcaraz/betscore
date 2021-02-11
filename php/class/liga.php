@@ -3,6 +3,7 @@ require_once "../../config/conexion.php";
 require_once "../../class/sesion.php";
 echo "4";
 class Liga{
+    /*
 
     public $id_liga;
     public $descrip_liga;
@@ -16,7 +17,7 @@ class Liga{
         $this->descrip_liga = $descrip;
         $this->id_api_liga = $id_api;
         
-     }
+     }*/
      
     // obtener ligas
     public function get_ligas(){
