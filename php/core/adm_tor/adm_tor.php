@@ -4,7 +4,7 @@ echo "1";
 require "../../class/sesion.php";
 echo "2";
 require "../../class/liga.php";
-echo "3";
+echo "6";
 
 
 //verifica session
