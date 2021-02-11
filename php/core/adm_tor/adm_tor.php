@@ -2,7 +2,7 @@
 require "../../config/funciones.php";
 require "../../class/sesion.php";
 require "../../class/torneo.php";
-require "../../config/conexion.php";
+//require "../../config/conexion.php";
 //require "../../class/liga.php";
 
 
