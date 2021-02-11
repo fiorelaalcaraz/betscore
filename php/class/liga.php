@@ -29,5 +29,4 @@ class Liga{
         $con->destruir();
         }
 }
-Liga::get_ligas();
 ?>  
