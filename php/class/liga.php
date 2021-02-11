@@ -20,6 +20,7 @@ class Liga{
      
     // obtener ligas
     public function get_ligas(){
+        echo "5";
         $con = new conexion();
         $con ->conectar();
         $liga = pg_query("select * from ligas order by 1;");
