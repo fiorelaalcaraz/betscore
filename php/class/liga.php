@@ -1,6 +1,6 @@
 <?php
 require_once "../../config/conexion.php";
-require_once "../../class/sesion.php";
+//require_once "../../class/sesion.php";
 
 class Liga{
 
@@ -29,4 +29,5 @@ class Liga{
         $con->destruir();
         }
 }
+Liga::get_ligas();
 ?>  
