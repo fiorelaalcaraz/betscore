@@ -1,5 +1,5 @@
 <?php
-echo "3.1";
+echo "2.1";
 class conexion {
     
     //put your code here
