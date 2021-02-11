@@ -1,5 +1,7 @@
 <?php
+echo "3.1";
 class conexion {
+    
     //put your code here
     public $host="ec2-54-227-245-146.compute-1.amazonaws.com";
     public $db="d5ckui8p5gnm3t";
