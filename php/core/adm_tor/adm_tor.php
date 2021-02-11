@@ -3,10 +3,8 @@ require "../../config/funciones.php";
 echo "1";
 require "../../class/sesion.php";
 echo "2";
-require "../../class/torneo.php";
-echo "3";
 require "../../class/liga.php";
-echo "4";
+echo "3";
 
 
 //verifica session
