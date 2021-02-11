@@ -5,7 +5,7 @@ require "../../class/sesion.php";
 echo "2";
 require "../../class/torneo.php";
 echo "3";
-require "php/config/conexion.php";
+require_once "../../config/conexion.php";
 echo "4";
 //require "../../class/liga.php";
 
