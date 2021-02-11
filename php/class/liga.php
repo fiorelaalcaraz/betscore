@@ -1,7 +1,7 @@
 <?php
 require_once "../../config/conexion.php";
 require_once "../../class/sesion.php";
-
+echo "4";
 class Liga{
 
     public $id_liga;
