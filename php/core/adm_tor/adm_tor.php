@@ -74,6 +74,7 @@ include "../menubar.php";
 												<div class="controls">
                                                     <select id="liga" required="required" data-placeholder="Select Liga" class="select-block-level chzn-select">
                                                         <option value=""></option>
+                                                        <?php
                                                         $con = new conexion();
                                                         $con ->conectar();
                                                         $liga = pg_query("select * from ligas order by 1;");
@@ -81,6 +82,7 @@ include "../menubar.php";
                                                         echo "<option value='".$lig["id_liga"]."'>".$lig["descrip_liga"]."</option>";
                                                         }
                                                         $con->destruir();
+                                                        ?>
                                                     </select>       
                                                 </div>
                                                <br> 	
