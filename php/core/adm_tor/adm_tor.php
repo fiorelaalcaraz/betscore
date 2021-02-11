@@ -1,8 +1,12 @@
 <?php 
 require "../../config/funciones.php";
+echo "1";
 require "../../class/sesion.php";
+echo "2";
 require "../../class/torneo.php";
-//require "../../config/conexion.php";
+echo "3";
+require "../../config/conexion.php";
+echo "4";
 //require "../../class/liga.php";
 
 
