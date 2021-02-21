@@ -3,7 +3,7 @@ require "../../config/funciones.php";
 echo "1";
 require "../../class/sesion.php";
 echo "2";
-require "..\..\class/liga.php";
+require "../../class/liga.php";
 echo "6";
 
 
